@@ -1,2 +1,2 @@
-git+git://github.com/openstack/neutron.git@stable/icehouse
+git+git://github.com/openstack/neutron.git@stable/juno
 requests

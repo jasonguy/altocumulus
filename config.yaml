@@ -1,9 +1,26 @@
+#AltoCumulus ML2 API Config
+
+## Neutron managed VLANs
+
+# Bind address for API - Use 0.0.0.0 for any address
 bind: 0.0.0.0
+
+# Bind port for API
 port: 8140
+
+# Debugging?
 debug: True
 
-local_bind: 10.40.10.122
+
+## Neutron Managed VXLAN
+
+# Local Bind address for use with VXLAN
+local_bind: 10.50.20.23
+
+# Service node address for use with VXLAN
 service_node: 10.40.10.1
 
-trunk_interfaces: uplink
-
+# Name of uplink interface connections
+# Typically, this would be a bond interface, and more preferably
+# A Multi-chassis LAG (CLAG) connection to a pair of spine nodes
+trunk_interfaces: uplink1
