@@ -20,10 +20,8 @@ There are two components involved in this project:
 On your Openstack Controller host:
 1. Install the driver and its dependencies, with the following commands:
 
-    ```bash
     pip install git+git://github.com/CumulusNetworks/altocumulus.git
     pip install requests
-    ```
 
 2. Add `cumulus` to the `mechanism_drivers` list in `/etc/neutron/plugins/ml2/ml2_conf.ini`
 
@@ -32,11 +30,11 @@ On your Openstack Controller host:
 ### HTTP API server
 On the Cumulus Linux switch:
 1. Install the API server, with the following commands:
-    ```bash
+
     apt-get install python-pip git
     pip install --upgrade setuptools
     pip install git+git://github.com/CumulusNetworks/altocumulus.git
-    ```
+
 2. Create the folder `/etc/altocumulus/` and copy the sample `config.yaml` to that folder.
 3. Place the included SysVinit script in `/etc/init.d/` on the switches and start the API server with the command:
    `service altocumulus-api start`
